@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="jIo-eX-E5o">
-                                <rect key="frame" x="18" y="251" width="334" height="29"/>
+                                <rect key="frame" x="18" y="264" width="334" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="18%"/>
@@ -80,22 +80,50 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Currence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="syB-66-H2y">
-                                <rect key="frame" x="32" y="297" width="274" height="55"/>
+                                <rect key="frame" x="24" y="388" width="274" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1z-fo-xwP">
-                                <rect key="frame" x="30" y="352" width="322" height="55"/>
+                                <rect key="frame" x="24" y="429" width="322" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96919697523117065" green="1" blue="0.97255152463912964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="tjT-BA-tEZ">
+                                <rect key="frame" x="258" y="310" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="splitTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zfx-MD-eUD"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="People Amout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JCJ-e7-G3n">
+                                <rect key="frame" x="18" y="318" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LhW-0r-1S3">
+                                <rect key="frame" x="173" y="318" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Each one pays " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jgi-Mc-NfB">
+                                <rect key="frame" x="17" y="347" width="335" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94718211889266968" green="1" blue="0.99391955137252808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.1225598609" green="0.27548385320000002" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <connections>
@@ -110,9 +138,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addMinusControl" destination="tjT-BA-tEZ" id="1OA-hY-70o"/>
                         <outlet property="billField" destination="x9m-fO-vhl" id="4fl-Tv-yuG"/>
                         <outlet property="langLabel" destination="syB-66-H2y" id="qQa-jh-7ef"/>
                         <outlet property="percentControl" destination="jIo-eX-E5o" id="EUk-Ou-8mD"/>
+                        <outlet property="pricePerPersonLabel" destination="Jgi-Mc-NfB" id="qTk-HY-64G"/>
+                        <outlet property="splitAmount" destination="LhW-0r-1S3" id="vZ4-GU-e5T"/>
                         <outlet property="tipLabel" destination="0ey-lq-GHH" id="vNB-jz-YiO"/>
                         <outlet property="totalLabel" destination="Hxn-EP-A0o" id="0Ni-rB-phI"/>
                         <outlet property="transformedAmount" destination="U1z-fo-xwP" id="m5a-Vg-nXw"/>

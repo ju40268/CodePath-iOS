@@ -14,8 +14,14 @@ class ViewController: UIViewController, DataPassBackDelegate {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var langLabel: UILabel!
+    @IBOutlet weak var splitAmount: UILabel!
     @IBOutlet weak var percentControl: UISegmentedControl!
+    @IBOutlet weak var addMinusControl: UIStepper!
+    @IBOutlet weak var pricePerPersonLabel: UILabel!
     @IBOutlet weak var transformedAmount: UILabel!
+    
+    
+    
     var globalTotal = 0.0
     
     func userDidEnterInformation(info:String) {
@@ -57,6 +63,17 @@ class ViewController: UIViewController, DataPassBackDelegate {
         tipLabel.text = String(format : "$%.2f", tip)
         totalLabel.text = String(format : "$%.2f", total)
         
+    }
+    @IBAction func splitTip(_ sender: Any) {
+        let pax = addMinusControl.value
+        splitAmount.text = String(Int(pax))
+        let total = totalLabel.text!
+        let index1 = total.index(total.startIndex, offsetBy: 1)
+        let price = Double(total.substring(from: index1))
+        
+        let pricePerPerson = price! / pax
+        
+        pricePerPersonLabel.text = String(format: "Each person pays $%.2f", pricePerPerson)
     }
     
 }
