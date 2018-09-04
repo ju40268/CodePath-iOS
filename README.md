@@ -32,7 +32,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 https://imgur.com/a/2uq4uUf
 
-<!-- <img src='https://imgur.com/a/2uq4uUf' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
+<img src='https://github.com/may811204/CodePath-iOS/tippydemo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
